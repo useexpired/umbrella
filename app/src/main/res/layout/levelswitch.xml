@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutLevelSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMain101"
+        android:gravity="center">
+
+        <!--             android:checked="true" -->
+        <!-- android:textColorLink="@android:color/holo_orange_light"-->
+
+        <Switch
+            android:id="@+id/switchBubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:contextClickable="false"
+            android:switchMinWidth="56dp"
+            android:checked="true"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textIsSelectable="false"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="11sp"
+            android:thumbTint="@color/colorSwitchThumb"
+            android:trackTint="@color/colorSwitchTrack" />
+    </RelativeLayout>
+</LinearLayout>

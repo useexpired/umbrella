@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutFreq"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorMain101"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+
+    <include
+        android:id="@+id/panelFreqBar"
+        layout="@layout/freq_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="3dp" />
+
+    <!--
+
+    Styling RangeSlider Reference:
+
+    https://material.io/components/sliders/android#theming-sliders
+
+    -->
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/freqSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-10dp"
+        android:stepSize="10"
+        android:valueFrom="40"
+        android:valueTo="2500"
+        app:labelStyle="@style/Widget.App.Tooltip"
+        app:thumbColor="@color/colorSliderThumb"
+        app:tickColor="@color/colorTick"
+        app:trackColor="@color/colorTrack"
+        app:values="@array/freqSliderValues" />
+
+    <LinearLayout
+        android:id="@+id/layoutFreqReadings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtFreqMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:elegantTextHeight="false"
+            android:text="40Hz"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtFreq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FREQUENCY"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtFreqMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:layout_weight="1"
+            android:text="2500Hz"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/colorText"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:max="500"
+        android:progress="250"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtSampleRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sample rate"
+        android:textColor="@color/colorText"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</LinearLayout>

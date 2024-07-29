@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorMain101"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/txtDistMin"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="1m"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colorText"
+        android:textSize="15sp" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/distSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:stepSize="1"
+        android:valueFrom="1"
+        android:valueTo="15"
+        app:labelStyle="@style/Widget.App.Tooltip"
+        app:thumbColor="@color/colorSliderThumb"
+        app:tickColor="@color/colorTick"
+        app:trackColor="@color/colorTrack"
+        app:values="@array/distSliderValues" />
+
+    <TextView
+        android:id="@+id/txtDistMax"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="15m"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorText"
+        android:textSize="15sp" />
+
+</LinearLayout>

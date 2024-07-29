@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorMain101"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_guide"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorMain101"
+            android:hint="10 (max 60m)"
+            android:inputType="number"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editFreq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorMain101"
+        android:hint="60"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/colorMain101"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/layoutBubblePanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBubblePanel"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:background="@color/colorBubblePanel">
+
+        <RelativeLayout
+            android:id="@+id/layoutBubbleMeter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorMain101"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgWallOnly"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bubble_capsule"
+                android:contentDescription="shit"
+                android:gravity="center"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/imgBubbleWall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bubble_hole"
+                android:contentDescription="shit"
+                android:gravity="center"
+                android:scaleType="center" />
+
+
+            <ImageView
+                android:id="@+id/imgBubble"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/bubble" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAxis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBubblePanel"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:weightSum="2"
+            tools:background="@color/colorBubblePanel">
+
+            <TextView
+                android:id="@+id/dx"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-99.99x"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/background_light"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/dy"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="99.99y"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/background_light"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

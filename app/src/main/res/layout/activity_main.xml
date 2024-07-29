@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMain101"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMain101"
+        android:backgroundTint="@color/colorMain101">
+
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAppPanel"
+            android:gravity="bottom"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/panelFrequency"
+                layout="@layout/freq_compact" />
+            <include
+                android:id="@+id/panelDistance"
+                layout="@layout/dist_compact" />
+            <LinearLayout
+                android:id="@+id/layoutDual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorMain101"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+
+                android:weightSum="2">
+
+                <include
+                    android:id="@+id/panelLIDAR"
+                    layout="@layout/lidar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+                <include
+                    android:id="@+id/panelBubbleLevel"
+                    layout="@layout/level"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panelBottomCtrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/panelAudioRecorder"
+                    layout="@layout/recorder_small"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/panelSwitchLevel"
+                    layout="@layout/levelswitch"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panelBottomCtrl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/panelAudioRecorder"
+                    layout="@layout/audio_gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <!--android:layout_gravity="right"
+                /-->
+                <!--
+
+                    android:layout_alignParentRight="true"/-->
+
+                <include
+                    android:id="@+id/panelWaveForm"
+                    layout="@layout/waveform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <!--android:visibility="gone"/-->
+                <!--android:layout_alignParentRight="true"/-->
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/for_debug_overlap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="messages......."
+                android:textColor="@color/colorDebugTxt"
+                android:textSize="11sp" />
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

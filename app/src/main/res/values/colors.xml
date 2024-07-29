@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorText">#dddddd</color>
+
+    <!-- main layout background color -->
+    <color name="colorMain101">#090C1E</color>
+    <color name="colorAppPanel">@color/colorMain101</color>
+
+    <!-- LIDAR LAYOUT -->
+    <color name="colorLIDARstatus">#888888</color>
+
+    <!-- bubble level -->
+    <color name="colorBubblePanel">@color/colorMain101</color>
+    <!--color name="colorBubblePanel">#303f9f</color-->
+
+    <!-- bubble level switch -->
+    <color name="colorSwitchTrack">#FFFFFF</color>
+    <color name="colorSwitchThumb">#AAAAAA</color>
+
+    <!-- Range slider -->
+    <color name="colorSliderThumb">#cccccc</color>
+    <color name="colorTick">#777777</color>
+    <color name="colorToolTip">#cccccc</color>
+    <color name="colorTrack">@color/colorTick</color>
+
+    <!-- frequency progressbar (background was #555555)-->
+    <color name="colorBarFreqBackground">#000000</color>
+    <color name="colorBarFreqTube">#313C89</color>
+
+    <!-- dialog distance max -->
+    <color name="colorDialogDistTxt">@color/colorToolTip</color>
+    <color name="colorDialogDistTxtWrong">#8E4B4B</color>
+
+
+    <!-- debug text color -->
+    <color name="colorDebugTxt">#555555</color>
+
+
+</resources>

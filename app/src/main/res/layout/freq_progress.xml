@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--
+    AVOID USING
+      android:progressDrawable="@drawable/freq_progress"
+
+    -->
+    <ProgressBar
+        android:id="@+id/barFreq"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="20"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="@color/colorMain101"
+
+        android:progressBackgroundTint="@color/colorBarFreqBackground"
+        android:progressTint="@color/colorBarFreqTube"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="2dp"
+        />
+</LinearLayout>
